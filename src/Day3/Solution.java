@@ -17,8 +17,6 @@ public class Solution {
       int n = scan.nextInt(); 
       scan.close();
       String ans="";
-          
-      // if 'n' is NOT evenly divisible by 2 (i.e.: n is odd)
       if(n%2==1){
          ans = "Weird";
       }
