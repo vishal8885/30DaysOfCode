@@ -5,43 +5,30 @@
  */
 package Day6;
 
-import java.util.Scanner;
 
 /**
  *
  * @author Vishal
  */
+import java.io.*;
+import java.util.*;
+
 public class Solution {
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner scan1 = new Scanner(System.in);
-        int time = scan1.nextInt();
-        scan1.nextLine();
-
-        while (time > 0) {
-
-            String str = scan1.nextLine();
-
-            char arr[] = str.toCharArray();
-            int len = str.length();
-
-            for (int x = 0; x < len; x = x + 2) {
-
-                System.out.print(arr[x]);
-
+        Scanner sc = new Scanner(System.in);
+          int height = sc.nextInt();
+          for (int level = 1; level <= height; level++) {
+            for (int step = 0; step < level; step++) {
+                  if (step == 0) {
+                      for (int k = 0; k < height - level; k++) {
+                          System.out.print(" ");
+                      }
+                  }
+                  System.out.print("#");
+                }
+              System.out.println();
             }
-
-            System.out.print(" ");
-
-            for (int x = 1; x < len; x = x + 2) {
-
-                System.out.print(arr[x]);
-            }
-
-            System.out.println();
-
-            time--;
-        }
     }
 }

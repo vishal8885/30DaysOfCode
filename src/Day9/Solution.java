@@ -5,32 +5,25 @@
  */
 package Day9;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Vishal
  */
+import java.io.*;
+import java.util.*;
 public class Solution {
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner in = new Scanner(System.in);
-        
-            while(in.hasNext())
-            {
-           long n = in.nextLong();
-        long abc=factorial(n);
-        System.out.println(abc);
-        }    
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        //Take Input
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int gcd=find_gcd(a,b);
+        System.out.println(gcd);
     }
-    
-    public static long factorial(long n)
-        {
-        if(n==0 || n==1)
-            {
-            return 1;
-        }
-        else
-            return n*factorial(n-1);
-    }
+   static  int find_gcd(int a,int b){
+          //Write the base condition
+        if (a == b || b == 0) 
+              return a;
+          return find_gcd(b,a%b);
+      }
 }

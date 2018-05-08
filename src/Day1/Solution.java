@@ -14,17 +14,14 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-        int i = 4;
-        double d = 4.0;
-        String s = "HackerRank ";
-        Scanner scan = new Scanner(System.in);
-        int j = scan.nextInt();
-        double k = scan.nextDouble();
-        scan.nextLine();
-        String str = scan.nextLine();
-        System.out.println(i + j);
-        System.out.println(d + k);
-        System.out.println(s + "" + str);
-        scan.close();
+        System.out.println("Primitive : double");
+        System.out.println("Primitive : char");
+        System.out.println("Primitive : boolean");
+        System.out.println("Primitive : int");
+        System.out.println("Referenced : String");
+        System.out.println("Primitive : boolean");
+        System.out.println("Primitive : double");
+        System.out.println("Primitive : char");
+        System.out.println("Referenced : String");
     }
 }
